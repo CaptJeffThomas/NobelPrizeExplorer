@@ -58,6 +58,9 @@ public class LaureateList {
                 if (next.startsWith("birthyear: ")){
                     heller.setBirthYear(next.substring(11));
                 }
+                if( next.startsWith("deathyear: ")){
+                    heller.setDeathYear(next.substring(11));
+                }
                 if (next.startsWith("biography: ")){
                     heller.setBiography(next.substring(11));
                 }  
@@ -65,8 +68,6 @@ public class LaureateList {
                     heller.setLecture(next.substring(9));
                 }  
                                 
-                 
-                
              }   
              input.close();
     }

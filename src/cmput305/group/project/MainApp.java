@@ -16,7 +16,11 @@ public class MainApp {
                    LaureateList list = new LaureateList();
                    DetailMenu menu = new DetailMenu(list.get(0));
                    menu.setVisible(true);
+                   PictureTableGUI view = new PictureTableGUI();
+                   PictureTableController pic = new PictureTableController(list, view);
+                   view.setVisible(true);
+                   
               }
         });
-    }
+    } 
 }

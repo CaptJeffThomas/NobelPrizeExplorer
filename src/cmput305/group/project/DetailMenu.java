@@ -27,7 +27,8 @@ public class DetailMenu extends javax.swing.JFrame {
         //set the labels with the Laureate's info
         ImageURLLoader loader = new ImageURLLoader(portraitLabel, vonnegut.getPhoto());
         loader.execute();
-        prizeLabel.setText(vonnegut.getPrize());
+        
+        prizeLabel.setText(vonnegut.getPrize().toUpperCase() + "  " + vonnegut.getYear());
         nameLabel.setText(vonnegut.getName());
         genderLabel.setText(vonnegut.getGender());
         lifespanLabel.setText(vonnegut.getBirth() + " - " + vonnegut.getDeath());
@@ -122,8 +123,9 @@ public class DetailMenu extends javax.swing.JFrame {
         biographyLabel = new javax.swing.JLabel();
         lectureLabel = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle(" Nobel Prize Explorer");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Laureate Details");
+        setResizable(false);
 
         closeButton.setText("Close");
         closeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -230,7 +232,7 @@ public class DetailMenu extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(portraitLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();

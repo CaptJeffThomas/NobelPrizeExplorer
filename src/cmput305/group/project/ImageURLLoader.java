@@ -4,8 +4,6 @@
  */
 package cmput305.group.project;
 
-import java.awt.Image;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -14,7 +12,6 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
@@ -25,7 +22,7 @@ import javax.swing.SwingWorker;
  * @author Charles Logan
  */
 public class ImageURLLoader extends SwingWorker<Icon, Object> {
-    public enum imageCache {
+    public static enum imageCache {
 
         IMAGE;
         private Map<String, Icon> imageMap;
@@ -49,9 +46,9 @@ public class ImageURLLoader extends SwingWorker<Icon, Object> {
         this.image = imageLabel;
         this.URL = URL;
     }
-
-    @Override
-    protected Icon doInBackground() throws Exception {
+ 
+   @Override	
+   protected Icon doInBackground() throws Exception {
         //System.out.println("irl to imageicon...");
         Icon temp = null;
         
@@ -71,7 +68,7 @@ public class ImageURLLoader extends SwingWorker<Icon, Object> {
         return temp;
     }
 
-    
+    @Override
     protected void done() {
 
         try {
