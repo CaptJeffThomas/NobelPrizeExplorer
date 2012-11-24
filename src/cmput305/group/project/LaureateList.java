@@ -38,6 +38,10 @@ public class LaureateList {
                 if (next.startsWith("name: ")){
                     heller.setName(next.substring(6));
                 }
+                
+                if(next.startsWith("longname: ")){
+                    heller.setLongName(next.substring(10));
+                }
                                 
                 if (next.startsWith("gender:")){
                     heller.setGender(next.substring(8));
