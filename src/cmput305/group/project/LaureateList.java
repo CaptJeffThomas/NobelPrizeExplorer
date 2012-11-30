@@ -32,7 +32,9 @@ public class LaureateList {
                 }
                                 
                 if (next.startsWith("prize: ")){
-                    heller.setPrize(next.substring(7));
+                    String temp = next.substring(7,8);
+                    heller.setPrize(temp.toUpperCase() + next.substring(8));
+                    
                 }
                                 
                 if (next.startsWith("name: ")){

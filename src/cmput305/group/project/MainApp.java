@@ -14,11 +14,9 @@ public class MainApp {
         java.awt.EventQueue.invokeLater(new Runnable() {
               public void run() {
                    LaureateList list = new LaureateList();
-                   DetailMenu menu = new DetailMenu(list.get(0));
-                   menu.setVisible(true);
-                   PictureTableGUI view = new PictureTableGUI();
-                   PictureTableController pic = new PictureTableController(list, view);
-                   view.setVisible(true);
+                   BrowseAndSearchGUI mainView  = new BrowseAndSearchGUI();
+                   BrowseAndSearchController mainCon = new BrowseAndSearchController( mainView , list);
+                   mainView.setVisible(true);
                    
               }
         });

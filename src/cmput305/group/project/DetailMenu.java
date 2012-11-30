@@ -18,7 +18,7 @@ public class DetailMenu extends javax.swing.JFrame {
     
     
     /** Creates new form NobelGUI */
-    public DetailMenu(final Laureate vonnegut) {
+    public DetailMenu( final Laureate vonnegut) {
         
         initComponents();
         
@@ -27,6 +27,7 @@ public class DetailMenu extends javax.swing.JFrame {
         //set the labels with the Laureate's info
         ImageURLLoader loader = new ImageURLLoader(portraitLabel, vonnegut.getPhoto());
         loader.execute();
+        
         
         prizeLabel.setText(vonnegut.getPrize().toUpperCase() + "  " + vonnegut.getYear());
         nameLabel.setText(vonnegut.getName());
@@ -37,12 +38,14 @@ public class DetailMenu extends javax.swing.JFrame {
         lectureLabel.setText(vonnegut.getLecture());
         biographyLabel.setText(vonnegut.getBiography());
         fullNameLabel.setText(vonnegut.getLongName());
+        super.pack();
         
         //sets up our biography URL link.  
         if(vonnegut.getBiography().contains("http://")){
             biographyLabel.setForeground(Color.blue);
             biographyLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             biographyLabel.addMouseListener(new MouseAdapter() {
+                @Override
             public void mouseClicked(MouseEvent e) {
                if (e.getClickCount() > 0) {
                  if (Desktop.isDesktopSupported()) {
@@ -64,6 +67,7 @@ public class DetailMenu extends javax.swing.JFrame {
             lectureLabel.setForeground(Color.blue);
             lectureLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
             lectureLabel.addMouseListener(new MouseAdapter() {
+                @Override
             public void mouseClicked(MouseEvent e) {
                if (e.getClickCount() > 0) {
                  if (Desktop.isDesktopSupported()) {

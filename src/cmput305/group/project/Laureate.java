@@ -20,18 +20,18 @@ public class Laureate {
     private String lecture;
     
     public Laureate(){
-        year ="Information not found";
+        year ="1901";
         prize ="Information not found";
         name ="Information not found";
-        longName ="information not found";
-        gender ="Information not found";
-        photo ="Unable to retrive";
+        longName ="Not Available";
+        gender = "Information not found";
+        photo = "Unable to retrieve";
         country ="Information not found";
         afiliation="Information not found";
         birthYear ="Information not found";
         deathYear ="Present";
-        biography ="Unable to retrive";
-        lecture ="Unable to retrive";
+        biography ="Not Available";
+        lecture ="Not Available";
     }
 
    /*Get methods to have variables acessable*/
