@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author Charles Logan
+ * @author Charles Logan  & Jeff Thomas
  * @version 0.2 Set of filter, sorters for the LaurateCollection collection.
  *
  * TODO: ???

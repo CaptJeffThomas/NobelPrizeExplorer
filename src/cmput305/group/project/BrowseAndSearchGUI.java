@@ -19,7 +19,7 @@ import javax.swing.JTable;
 
 /**
  *
- * @author Alex
+ * @author Alex  & Jeff Thomas
  */
 public class BrowseAndSearchGUI extends javax.swing.JFrame {
 

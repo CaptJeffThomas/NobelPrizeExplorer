@@ -1,0 +1,5 @@
+This project was a fairly simple Java group project meant to familiarize ourselves with both source control tools and UI accessibility concepts.  
+
+My team, in their infinite wisdom, neglected standards like git or svn in favour of pastebin.  Because pastebin.
+
+The fruits of our labours rest in the .jar file in the same directory as this text.  The netbeans source code is available as well.
